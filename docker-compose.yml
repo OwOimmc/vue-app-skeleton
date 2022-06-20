@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  # vue3 vite
+  nodeVite:
+    image: node:16.14.2
+    user: '1000:1000'
+    volumes:
+      - ./.docker/linux/.bashrc:/home/node/.bashrc
+      - .:/app/
+    ports:
+      - 4000:4000
+    working_dir: /app
+    command: bash -c "npm install && npm run dev"

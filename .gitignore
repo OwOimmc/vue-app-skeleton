@@ -1,0 +1,12 @@
+!.gitignore
+!.htaccess
+!web.config
+
+node_modules/*
+
+dist/
+
+.idea/
+.idea/*
+
+.DS_Store
