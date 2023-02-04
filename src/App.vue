@@ -4,7 +4,6 @@
   </div>
 </template>
 
-
 <script>
 import index from '@/views/index/index.vue'
 export default {
@@ -14,5 +13,3 @@ export default {
   setup() {}
 }
 </script>
-
-  

@@ -16,7 +16,7 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
-    port: 4000
+    port: 1000
   },
   plugins: [vue(), eslintPlugin()]
 })

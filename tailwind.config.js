@@ -21,7 +21,9 @@ module.exports = {
       borderRadius: {}
     },
 
-    spacing: {}
+    spacing: {
+      50: '5rem'
+    }
   },
 
   variants: {
