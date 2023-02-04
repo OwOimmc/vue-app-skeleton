@@ -28,12 +28,14 @@ const isTimerStyleWrapper = ref(true)
 
 const isYellow = ref(true)
 
+const isYellowBox = ref(true)
+
 const timerMoveBox = () => {
   if (isTimerMoveBox.value) {
     setTimeout(() => {
       move()
       timerMoveBox()
-    }, 1000)
+    }, 250)
   }
 }
 const timerStyleBox = () => {
@@ -41,19 +43,17 @@ const timerStyleBox = () => {
     setTimeout(() => {
       style()
       timerStyleBox()
-    }, 1000)
+    }, 500)
   }
 }
 
 const timerStyleWrapper = () => {
   if (isTimerStyleWrapper.value) {
     setTimeout(() => {
-      style()
-
       isYellow.value = !isYellow.value
 
       timerStyleWrapper()
-    }, 250)
+    }, 1000)
   }
 }
 
@@ -85,10 +85,15 @@ const move = () => {
 const style = () => {
   for (let index = 0; index < arrBlocks.value.length; index++) {
     arrBlocks.value[index].box = getRadnom(10)
-    arrBlocks.value[index].acutal =
-      getRadnom(2) === 1
-        ? arrBlocks.value[index].bg2
-        : arrBlocks.value[index].bg1
+    // arrBlocks.value[index].acutal =
+    //   getRadnom(2) === 1
+    //     ? arrBlocks.value[index].bg2
+    //     : arrBlocks.value[index].bg1
+    arrBlocks.value[index].acutal = isYellowBox.value
+      ? arrBlocks.value[index].bg2
+      : arrBlocks.value[index].bg1
+
+    isYellowBox.value = !isYellowBox.value
   }
 }
 
