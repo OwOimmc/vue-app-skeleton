@@ -12,3 +12,15 @@ services:
       - 1000:1000
     working_dir: /app
     command: bash -c "npm install && npm run dev"
+
+  api:
+    image: ig_api
+    build:
+      context: .
+      dockerfile: ./.docker/api/Dockerfile
+    user: scrapper:scrapper
+    volumes:
+      - ./api:/app/api
+      - ./.docker/linux/.bashrc:/home/scrapper/.bashrc
+    ports:
+      - 7000:7000

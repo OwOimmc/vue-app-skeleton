@@ -1,6 +1,7 @@
 <template>
   <div class="w-full">
-    <lol></lol>
+    <!-- <index></index> -->
+    <yt></yt>
   </div>
 </template>
 
@@ -11,6 +12,7 @@ export default {
 </script>
 
 <script setup>
-import index from '@/views/index/index.vue'
-import lol from '@/views/index/lol.vue'
+// import index from '@/views/index/index.vue'
+// import lol from '@/views/index/lol.vue'
+import yt from '@/views/index/yt.vue'
 </script>
